@@ -20,6 +20,7 @@ Then link it to that database when you run ownCloud:
 
 ## Security
 Generate your own certificates:
+
     openssl genrsa -des3 -out /home/giodegas/ssl/myssl.key 1024
     openssl req -new -key /home/giodegas/ssl/myssl.key -out /home/giodegas/ssl/myssl.crt
     
