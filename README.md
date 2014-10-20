@@ -18,6 +18,11 @@ Then link it to that database when you run ownCloud:
 
     docker run --link postgresql:db ...
 
+## Security
+Generate your own certificates:
+    openssl genrsa -des3 -out /home/giodegas/ssl/myssl.key 1024
+    openssl req -new -key /home/giodegas/ssl/myssl.key -out /home/giodegas/ssl/myssl.crt
+    
 How to run
 
 This is a full example, utilizing all options. But feel free to remove what you don't want.
