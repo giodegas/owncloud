@@ -1,5 +1,8 @@
-FROM		    ubuntu:14.04
-MAINTAINER	Josh Chaney "josh@chaney.io"
+FROM        debian:jessie
+
+MAINTAINER  Giovanni De Gasperis <giovanni@giodegas.it>
+
+RUN apt-get update && apt-get -y install curl bzip2 g++ libgettextpo0 gettext file
 
 ADD         https://download.owncloud.org/community/owncloud-7.0.2.tar.bz2 /var/www/
 ADD         bootstrap.sh /usr/bin/
