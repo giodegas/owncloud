@@ -1,4 +1,4 @@
-FROM        debian:jessie
+FROM        debian:wheezy
 
 MAINTAINER  Giovanni De Gasperis <giovanni@giodegas.it>
 
