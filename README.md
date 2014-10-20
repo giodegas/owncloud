@@ -1,6 +1,6 @@
 owncloud
 ========
-( [ReadMe](http://registry.hub.docker.com/u/jchaney/owncloud) from [jchaney](http://hub.docker.com/u/jchaney) )
+( inspired from [ReadMe](http://registry.hub.docker.com/u/jchaney/owncloud) from [jchaney](http://hub.docker.com/u/jchaney) )
 
 ## Details
 
