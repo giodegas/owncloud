@@ -22,7 +22,7 @@ How to run
 
 This is a full example, utilizing all options. But feel free to remove what you don't want.
 
-    docker run -h my.domain.com -p 443:443 --name nginx --link postgresql:db -v /home/jchaney/files:/var/www/owncloud/data -v /home/jchaney/ssl:/root/ssl -e "SSL_KEY=/root/ssl/myssl.key" -e "SSL_CERT=/root/ssl/myssl.crt" jchaney/openresty-nginx
+    docker run -h my.domain.com -p 443:443 --name nginx --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -v /home/giodegas/ssl:/root/ssl -e "SSL_KEY=/root/ssl/myssl.key" -e "SSL_CERT=/root/ssl/myssl.crt" giodegas/owncloud
 
 ## Options
 
