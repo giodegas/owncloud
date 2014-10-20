@@ -46,7 +46,7 @@ You will need to attach a host volume containing your SSL key and cert, and pass
 ## How to run
 This is a NO SSL example:
 
-    docker run -h linode.giodegas.it -p 80:80 --name nginx80 --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -v /home/giodegas/ssl:/root/ssl -d giodegas/owncloud
+    docker run -h linode.giodegas.it -p 80:80 --name nginx80 --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -d giodegas/owncloud
     
 This is a full example, utilizing all options. But feel free to remove what you don't want.
 
