@@ -18,18 +18,6 @@ Then link it to that database when you run ownCloud:
 
     docker run --link postgresql:db ...
 
-## Security
-Generate your own certificates:
-
-    openssl genrsa -des3 -out /home/giodegas/ssl/myssl.key 1024
-    openssl req -new -key /home/giodegas/ssl/myssl.key -out /home/giodegas/ssl/myssl.crt
-    
-How to run
-
-This is a full example, utilizing all options. But feel free to remove what you don't want.
-
-    docker run -h my.domain.com -p 443:443 --name nginx --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -v /home/giodegas/ssl:/root/ssl -e "SSL_KEY=/root/ssl/myssl.key" -e "SSL_CERT=/root/ssl/myssl.crt" giodegas/owncloud
-
 ## Options
 
 Nginx Configuration
@@ -46,9 +34,23 @@ Attach host volume to /var/www/owncloud/data
 
 ## SSL support
 
+Generate your own certificates:
+
+    openssl genrsa -des3 -out /home/giodegas/ssl/myssl.key 1024
+    openssl req -new -key /home/giodegas/ssl/myssl.key -out /home/giodegas/ssl/myssl.crt
+
 You will need to attach a host volume containing your SSL key and cert, and pass the path to those in env variables SSL_KEY and SSL_CERT
 
     docker run -v /home/jchaney/ssl:/root/ssl -e "SSL_KEY=/root/ssl/myssl.key" -e "SSL_CERT=/root/ssl/myssl.crt" ...
+
+## How to run
+This is a NO SSL example:
+
+    docker run -h linode.giodegas.it -p 80:80 --name nginx80 --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -v /home/giodegas/ssl:/root/ssl -d giodegas/owncloud
+    
+This is a full example, utilizing all options. But feel free to remove what you don't want.
+
+    docker run -h my.domain.com -p 443:443 --name nginx443 --link postgresql:db -v /home/giodegas/files:/var/www/owncloud/data -v /home/giodegas/ssl:/root/ssl -e "SSL_KEY=/root/ssl/myssl.key" -e "SSL_CERT=/root/ssl/myssl.crt" giodegas/owncloud
 
 ## Note
 
