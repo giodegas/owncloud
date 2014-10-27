@@ -60,11 +60,13 @@ Make sure to pass the -h option to Docker run with your FQDN if you want webdav 
 
 NOTE: Make sure you use the final hostname/FQDN you plan on accessing your ownCloud server with when connecting and doing initial configuration below. ownCloud will take the URL used to access the Installation Wizard and insert that into the config.php file for the ‘trusted_domains’ setting. Users will only be able to log into ownCloud when they point their browsers to a domain name listed in the ‘trusted_domains’ setting. An IPv4 address can be specified instead of a domain name.
 
-Head to http://hostname/owncloud or https://hostname/owncloud
+Head to 
+
+    http://hostname/owncloud or https://hostname/owncloud
 Choose your own username and password
-db username is postgres (if you used the postgres image mentioned previously)
-db password can be left blank (unless you changed this before hand)
-db name can be whatever you want
+* db username is postgres (if you used the postgres image mentioned previously)
+* db password can be left blank (unless you changed this before hand)
+* db name can be whatever you want
 use the database alias as the hostname, from my example you would use: db
 
 ## Resources
